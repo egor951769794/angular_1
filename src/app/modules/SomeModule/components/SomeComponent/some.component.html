@@ -1,16 +1,2 @@
-<h2>Heroes</h2>
-
-<div *ngFor="let hero of heroes">
-    <h3>
-        <a [title]="hero.name + ' details'">
-          {{ hero.name }}
-        </a>
-    </h3>
-
-    <p *ngIf="hero.desc">
-        Description: {{ hero.desc }}
-    </p>
-
-    <button (click)="share()">share</button>
-    
-</div>
+<app-dashboard *ngIf="appearance == 'dash'" [data]="heroes"></app-dashboard>
+<app-list *ngIf="appearance == 'list'" [data]="heroes"></app-list>

@@ -1,0 +1,10 @@
+<div>
+    <h2 class="dash-header">Top Heroes</h2>
+    <div class="dash-container">
+        <div class="dash-cell"  *ngFor="let hero of data">
+            <a class="dash-link" [title]="hero.name + ' details'">
+                {{ hero.name }}
+            </a>
+        </div>
+    </div>
+</div>

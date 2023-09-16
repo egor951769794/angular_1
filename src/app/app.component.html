@@ -1,1 +1,5 @@
-<app-some></app-some>
+<app-app-switch [switcher]="switchService"></app-app-switch>
+<app-some 
+    [appearance]="switchService.getAppearance()" 
+    [heroes]="switchService.getAppearance() == 'dash' ? heroesService.getTopHeroes(4) : heroesService.getAllHeroes()">
+</app-some>
